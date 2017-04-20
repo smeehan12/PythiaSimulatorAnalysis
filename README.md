@@ -1,9 +1,9 @@
 # Pythia Simulator
 This is initial setup for simulating events with the Pythia event generator and using fastjet to perform jet clustering.  This is intended as a starting point to develop an analysis.
 
-################################
+
 # First time setup
-################################
+
 After checking out the code which allows you to see this README, you must install three third party sources of code that are used by this outlined below with tips from our experience.  Note that these must be housed at the same level as the TelescopingJets code that you checked out.  This is particularly true in the case of event generation with Pythia8 
 
 ### Pythia8: http://home.thep.lu.se/~torbjorn/Pythia.html 
@@ -30,9 +30,10 @@ This is the first state of analysis in which the Pythia8 event generator is used
 EventGeneration
 
 #### How : 
-$ source compile.sh
-
-$ ./Generate 1 pythia_ww.root 1000
+```
+source compile.sh
+./Generate 1 pythia_ww.root 1000
+```
 
 #### What :
 This will generate 1000 events and save to the pythia_ww.root output file a flat ntuple that contains truth vectors of the relevant particles (W,Z) for truth tagging later along with vector<double> branches for all of the truth particles with final state particles.
@@ -46,9 +47,10 @@ This is the second stage of analysis that takes as input the set of final state 
 EventAnalyzer
 
 ### How : 
-$ source compile.sh
-
-$ ./NTupler 1 path/to/pythia\_ww.root output\_wz.root
+```
+source compile.sh
+./NTupler 1 path/to/pythia\_ww.root output\_wz.root
+```
 
 #### What :
 This will process the 1000 events generated with the `MakeNTupleFromPythia` code and do the following:
