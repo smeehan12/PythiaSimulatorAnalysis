@@ -3,8 +3,9 @@ This is initial setup for simulating events with the Pythia event generator and 
 
 
 # First time setup
+In addition to this code, you will need to compile and install the following additional packages, whose libraries are used within the generation and analysis framework.
 
-After checking out the code which allows you to see this README, you must install three third party sources of code that are used by this outlined below with tips from our experience.  Note that these must be housed at the same level as the TelescopingJets code that you checked out.  This is particularly true in the case of event generation with Pythia8 
+### ROOT: https://root.cern.ch/building-root   
 
 ### Pythia8: http://home.thep.lu.se/~torbjorn/Pythia.html 
 - This must be compiled/installed in a location that is then accessible when you compile the EventGenerator.  You will need to point the compilation to the Pythia directory.
