@@ -1,0 +1,24 @@
+! ww procuciont via G*
+
+!Main:numberOfEvents = 1000
+Main:numberOfEvents = 200000
+
+Beams:idA = 2212 ! first incoming beam is a 2212, i.e. a proton.
+Beams:idB = 2212 ! second beam is also a proton.
+
+Beams:eCM = 13000. ! the cm energy of collisions.
+
+!processes
+ExtraDimensionsG*:gg2G* = on
+
+!force decay of graviton to h
+5100039:onMode = off
+5100039:onIfAny = 24
+
+!specify W+- decays only to quarks
+24:onMode = off 
+24:onIfAny = 1 2 3 4 5
+
+!turn off underlying event
+PartonLevel:ISR = on
+PartonLevel:MPI = on
